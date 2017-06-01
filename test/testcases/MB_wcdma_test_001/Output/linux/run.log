@@ -1,0 +1,203 @@
+2015-12-23 15:12:42,189 INFO  ==========================================
+2015-12-23 15:12:42,190 INFO          MB_wcdma_test_001
+2015-12-23 15:12:42,190 INFO  ==========================================
+2015-12-23 15:12:42,300 INFO  Executed python in foreground with exit status = 0
+2015-12-23 15:12:46,312 INFO  Assertion on boolean expression equal to true ... passed
+2015-12-23 15:12:46,336 INFO  Assertion on boolean expression equal to true ... passed
+2015-12-23 15:12:46,339 INFO  Assertion on boolean expression equal to true ... passed
+2015-12-23 15:12:46,362 INFO  /var/fpwork/Nagios//libexec/check_procs -w 250 -c 400 -s RSZDT
+2015-12-23 15:12:46,362 INFO  Status: 256
+2015-12-23 15:12:46,362 INFO  PROCS WARNING: 260 processes with STATE = RSZDT | procs=260;250;400;0;
+2015-12-23 15:12:46,363 WARN  Assertion on boolean expression equal to true ... failed
+2015-12-23 15:12:46,366 INFO  Assertion on boolean expression equal to true ... passed
+2015-12-23 15:12:46,369 INFO  Assertion on boolean expression equal to true ... passed
+2015-12-23 15:12:46,377 INFO  Assertion on boolean expression equal to true ... passed
+2015-12-23 15:12:46,381 INFO  Assertion on boolean expression equal to true ... passed
+2015-12-23 15:12:56,385 INFO  /var/fpwork/Nagios//libexec/check_nt -H 192.168.1.2 -p 12489 -v CLIENTVERSION
+2015-12-23 15:12:56,386 INFO  Status: 512
+2015-12-23 15:12:56,387 INFO  CRITICAL - Socket timeout after 10 seconds
+2015-12-23 15:12:56,387 WARN  Assertion on boolean expression equal to true ... failed
+2015-12-23 15:13:06,396 INFO  /var/fpwork/Nagios//libexec/check_nt -H 192.168.1.2 -p 12489 -v UPTIME
+2015-12-23 15:13:06,397 INFO  Status: 512
+2015-12-23 15:13:06,398 INFO  CRITICAL - Socket timeout after 10 seconds
+2015-12-23 15:13:06,398 WARN  Assertion on boolean expression equal to true ... failed
+2015-12-23 15:13:16,408 INFO  /var/fpwork/Nagios//libexec/check_nt -H 192.168.1.2 -p 12489 -v CPULOAD -l 5,80,90
+2015-12-23 15:13:16,409 INFO  Status: 512
+2015-12-23 15:13:16,409 INFO  CRITICAL - Socket timeout after 10 seconds
+2015-12-23 15:13:16,410 WARN  Assertion on boolean expression equal to true ... failed
+2015-12-23 15:13:26,419 INFO  /var/fpwork/Nagios//libexec/check_nt -H 192.168.1.2 -p 12489 -v MEMUSE -w 80 -c 90
+2015-12-23 15:13:26,420 INFO  Status: 512
+2015-12-23 15:13:26,420 INFO  CRITICAL - Socket timeout after 10 seconds
+2015-12-23 15:13:26,421 WARN  Assertion on boolean expression equal to true ... failed
+2015-12-23 15:13:36,430 INFO  /var/fpwork/Nagios//libexec/check_nt -H 192.168.1.2 -p 12489 -v USEDDISKSPACE -l c -w 80 -c 90
+2015-12-23 15:13:36,431 INFO  Status: 512
+2015-12-23 15:13:36,431 INFO  CRITICAL - Socket timeout after 10 seconds
+2015-12-23 15:13:36,432 WARN  Assertion on boolean expression equal to true ... failed
+2015-12-23 15:13:46,441 INFO  /var/fpwork/Nagios//libexec/check_nt -H 192.168.1.2 -p 12489 -v SERVICESTATE -d SHOWALL -l W3SVC
+2015-12-23 15:13:46,442 INFO  Status: 512
+2015-12-23 15:13:46,443 INFO  CRITICAL - Socket timeout after 10 seconds
+2015-12-23 15:13:46,443 WARN  Assertion on boolean expression equal to true ... failed
+2015-12-23 15:13:56,452 INFO  /var/fpwork/Nagios//libexec/check_nt -H 192.168.1.2 -p 12489 -v PROCSTATE -d SHOWALL -l Explorer.exe
+2015-12-23 15:13:56,453 INFO  Status: 512
+2015-12-23 15:13:56,453 INFO  CRITICAL - Socket timeout after 10 seconds
+2015-12-23 15:13:56,454 WARN  Assertion on boolean expression equal to true ... failed
+2015-12-23 15:14:00,862 INFO  Assertion on boolean expression equal to true ... passed
+2015-12-23 15:14:05,225 INFO  Assertion on boolean expression equal to true ... passed
+2015-12-23 15:14:05,750 INFO  Assertion on boolean expression equal to true ... passed
+2015-12-23 15:14:06,227 INFO  Assertion on boolean expression equal to true ... passed
+2015-12-23 15:14:06,235 INFO  /var/fpwork/Nagios//libexec/check_http_without_size -I wrling30.emea.nsn-net.net -p 8085
+2015-12-23 15:14:06,236 INFO  Status: 32512
+2015-12-23 15:14:06,236 INFO  sh: /var/fpwork/Nagios//libexec/check_http_without_size: No such file or directory
+2015-12-23 15:14:06,237 WARN  Assertion on boolean expression equal to true ... failed
+2015-12-23 15:14:07,403 INFO  /var/fpwork/Nagios//libexec/check_nrpe -H wrling30.emea.nsn-net.net -c check_svn_cb
+2015-12-23 15:14:07,404 INFO  Status: 512
+2015-12-23 15:14:07,405 INFO  NRPE: Command 'check_svn_cb' not defined
+2015-12-23 15:14:07,405 WARN  Assertion on boolean expression equal to true ... failed
+2015-12-23 15:14:07,413 INFO  /var/fpwork/Nagios//libexec/check_http_without_size -I wrling30.emea.nsn-net.net -p 8088
+2015-12-23 15:14:07,414 INFO  Status: 32512
+2015-12-23 15:14:07,414 INFO  sh: /var/fpwork/Nagios//libexec/check_http_without_size: No such file or directory
+2015-12-23 15:14:07,414 WARN  Assertion on boolean expression equal to true ... failed
+2015-12-23 15:14:07,422 INFO  /var/fpwork/Nagios//libexec/check_http_without_size -I paketointi.emea.nsn-net.net
+2015-12-23 15:14:07,422 INFO  Status: 32512
+2015-12-23 15:14:07,423 INFO  sh: /var/fpwork/Nagios//libexec/check_http_without_size: No such file or directory
+2015-12-23 15:14:07,423 WARN  Assertion on boolean expression equal to true ... failed
+2015-12-23 15:14:07,505 INFO  /var/fpwork/Nagios//libexec/check_nrpe -H hzbtsscm.china.nsn-net.net -c check_load
+2015-12-23 15:14:07,506 INFO  Status: 768
+2015-12-23 15:14:07,506 INFO  Warning threshold must be float or float triplet!
+
+Usage:
+check_load [-r] -w WLOAD1,WLOAD5,WLOAD15 -c CLOAD1,CLOAD5,CLOAD15
+2015-12-23 15:14:07,507 WARN  Assertion on boolean expression equal to true ... failed
+2015-12-23 15:14:07,540 INFO  /var/fpwork/Nagios//libexec/check_nrpe -H 10.159.194.40 -c check_load
+2015-12-23 15:14:07,541 INFO  Status: 768
+2015-12-23 15:14:07,542 INFO  Warning threshold must be float or float triplet!
+
+Usage:
+check_load [-r] -w WLOAD1,WLOAD5,WLOAD15 -c CLOAD1,CLOAD5,CLOAD15
+2015-12-23 15:14:07,542 WARN  Assertion on boolean expression equal to true ... failed
+2015-12-23 15:14:07,621 INFO  /var/fpwork/Nagios//libexec/check_nrpe -H hzlinb04.china.nsn-net.net -c check_load
+2015-12-23 15:14:07,622 INFO  Status: 768
+2015-12-23 15:14:07,623 INFO  Warning threshold must be float or float triplet!
+
+Usage:
+check_load [-r] -w WLOAD1,WLOAD5,WLOAD15 -c CLOAD1,CLOAD5,CLOAD15
+2015-12-23 15:14:07,623 WARN  Assertion on boolean expression equal to true ... failed
+2015-12-23 15:14:08,831 INFO  /var/fpwork/Nagios//libexec/check_nrpe -H wrling30.emea.nsn-net.net -c check_load
+2015-12-23 15:14:08,832 INFO  Status: 768
+2015-12-23 15:14:08,832 INFO  Warning threshold must be float or float triplet!
+
+Usage:
+check_load [-r] -w WLOAD1,WLOAD5,WLOAD15 -c CLOAD1,CLOAD5,CLOAD15
+2015-12-23 15:14:08,833 WARN  Assertion on boolean expression equal to true ... failed
+2015-12-23 15:14:18,844 INFO  /var/fpwork/Nagios//libexec/check_nrpe -H paketointi.emea.nsn-net.net -c check_load
+2015-12-23 15:14:18,845 INFO  Status: 512
+2015-12-23 15:14:18,845 INFO  CHECK_NRPE: Socket timeout after 10 seconds.
+2015-12-23 15:14:18,846 WARN  Assertion on boolean expression equal to true ... failed
+2015-12-23 15:14:18,913 INFO  /var/fpwork/Nagios//libexec/check_nrpe -H hzbtsscm.china.nsn-net.net -c check_disk
+2015-12-23 15:14:18,914 INFO  Status: 768
+2015-12-23 15:14:18,914 INFO  Unknown argument
+Usage:
+ check_disk -w limit -c limit [-W limit] [-K limit] {-p path | -x device}
+[-C] [-E] [-e] [-f] [-g group ] [-k] [-l] [-M] [-m] [-R path ] [-r path ]
+[-t timeout] [-u unit] [-v] [-X type] [-N type] [-n]
+2015-12-23 15:14:18,915 WARN  Assertion on boolean expression equal to true ... failed
+2015-12-23 15:14:18,950 INFO  /var/fpwork/Nagios//libexec/check_nrpe -H 10.159.194.40 -c check_disk
+2015-12-23 15:14:18,950 INFO  Status: 768
+2015-12-23 15:14:18,951 INFO  Unknown argument
+Usage:
+ check_disk -w limit -c limit [-W limit] [-K limit] {-p path | -x device}
+[-C] [-E] [-e] [-f] [-g group ] [-k] [-l] [-M] [-m] [-R path ] [-r path ]
+[-t timeout] [-u unit] [-v] [-X type] [-N type] [-n]
+2015-12-23 15:14:18,951 WARN  Assertion on boolean expression equal to true ... failed
+2015-12-23 15:14:19,014 INFO  /var/fpwork/Nagios//libexec/check_nrpe -H hzlinb04.china.nsn-net.net -c check_disk
+2015-12-23 15:14:19,015 INFO  Status: 768
+2015-12-23 15:14:19,016 INFO  Unknown argument
+Usage:
+ check_disk -w limit -c limit [-W limit] [-K limit] {-p path | -x device}
+[-C] [-E] [-e] [-f] [-g group ] [-k] [-l] [-M] [-m] [-R path ] [-r path ]
+[-t timeout] [-u unit] [-v] [-X type] [-N type] [-n]
+2015-12-23 15:14:19,016 WARN  Assertion on boolean expression equal to true ... failed
+2015-12-23 15:14:20,195 INFO  /var/fpwork/Nagios//libexec/check_nrpe -H wrling30.emea.nsn-net.net -c check_disk
+2015-12-23 15:14:20,196 INFO  Status: 768
+2015-12-23 15:14:20,197 INFO  Unknown argument
+Usage:
+ check_disk -w limit -c limit [-W limit] [-K limit] {-p path | -x device}
+[-C] [-E] [-e] [-f] [-g group ] [-k] [-l] [-M] [-m] [-R path ] [-r path ]
+[-t timeout] [-u unit] [-v] [-X type] [-N type] [-n]
+2015-12-23 15:14:20,197 WARN  Assertion on boolean expression equal to true ... failed
+2015-12-23 15:14:30,213 INFO  /var/fpwork/Nagios//libexec/check_nrpe -H paketointi.emea.nsn-net.net -c check_disk
+2015-12-23 15:14:30,214 INFO  Status: 512
+2015-12-23 15:14:30,214 INFO  CHECK_NRPE: Socket timeout after 10 seconds.
+2015-12-23 15:14:30,215 WARN  Assertion on boolean expression equal to true ... failed
+2015-12-23 15:14:30,284 INFO  /var/fpwork/Nagios//libexec/check_nrpe -H hzbtsscm.china.nsn-net.net -c check_users
+2015-12-23 15:14:30,285 INFO  Status: 768
+2015-12-23 15:14:30,285 INFO  check_users: Warning threshold must be a positive integer
+Usage:
+check_users -w <users> -c <users>
+2015-12-23 15:14:30,286 WARN  Assertion on boolean expression equal to true ... failed
+2015-12-23 15:14:30,319 INFO  /var/fpwork/Nagios//libexec/check_nrpe -H 10.159.194.40 -c check_users
+2015-12-23 15:14:30,319 INFO  Status: 768
+2015-12-23 15:14:30,320 INFO  check_users: Warning threshold must be a positive integer
+Usage:
+check_users -w <users> -c <users>
+2015-12-23 15:14:30,320 WARN  Assertion on boolean expression equal to true ... failed
+2015-12-23 15:14:30,387 INFO  /var/fpwork/Nagios//libexec/check_nrpe -H hzlinb04.china.nsn-net.net -c check_users
+2015-12-23 15:14:30,388 INFO  Status: 768
+2015-12-23 15:14:30,388 INFO  check_users: Warning threshold must be a positive integer
+Usage:
+check_users -w <users> -c <users>
+2015-12-23 15:14:30,389 WARN  Assertion on boolean expression equal to true ... failed
+2015-12-23 15:14:31,526 INFO  /var/fpwork/Nagios//libexec/check_nrpe -H wrling30.emea.nsn-net.net -c check_users
+2015-12-23 15:14:31,527 INFO  Status: 768
+2015-12-23 15:14:31,527 INFO  check_users: Warning threshold must be a positive integer
+Usage:
+check_users -w <users> -c <users>
+2015-12-23 15:14:31,528 WARN  Assertion on boolean expression equal to true ... failed
+2015-12-23 15:14:41,543 INFO  /var/fpwork/Nagios//libexec/check_nrpe -H paketointi.emea.nsn-net.net -c check_users
+2015-12-23 15:14:41,545 INFO  Status: 512
+2015-12-23 15:14:41,545 INFO  CHECK_NRPE: Socket timeout after 10 seconds.
+2015-12-23 15:14:41,546 WARN  Assertion on boolean expression equal to true ... failed
+2015-12-23 15:14:46,630 INFO  /var/fpwork/Nagios//libexec/check_nrpe -H hzbtsscm.china.nsn-net.net -c check_zombie_procs
+2015-12-23 15:14:46,632 INFO  Status: 512
+2015-12-23 15:14:46,632 INFO  NRPE: Command 'check_zombie_procs' not defined
+2015-12-23 15:14:46,633 WARN  Assertion on boolean expression equal to true ... failed
+2015-12-23 15:14:46,650 INFO  /var/fpwork/Nagios//libexec/check_nrpe -H 10.159.194.40 -c check_zombie_procs
+2015-12-23 15:14:46,650 INFO  Status: 512
+2015-12-23 15:14:46,650 INFO  NRPE: Command 'check_zombie_procs' not defined
+2015-12-23 15:14:46,650 WARN  Assertion on boolean expression equal to true ... failed
+2015-12-23 15:14:46,709 INFO  /var/fpwork/Nagios//libexec/check_nrpe -H hzlinb04.china.nsn-net.net -c check_zombie_procs
+2015-12-23 15:14:46,710 INFO  Status: 512
+2015-12-23 15:14:46,710 INFO  NRPE: Command 'check_zombie_procs' not defined
+2015-12-23 15:14:46,711 WARN  Assertion on boolean expression equal to true ... failed
+2015-12-23 15:14:47,930 INFO  /var/fpwork/Nagios//libexec/check_nrpe -H wrling30.emea.nsn-net.net -c check_zombie_procs
+2015-12-23 15:14:47,931 INFO  Status: 512
+2015-12-23 15:14:47,931 INFO  NRPE: Command 'check_zombie_procs' not defined
+2015-12-23 15:14:47,931 WARN  Assertion on boolean expression equal to true ... failed
+2015-12-23 15:14:57,937 INFO  /var/fpwork/Nagios//libexec/check_nrpe -H paketointi.emea.nsn-net.net -c check_zombie_procs
+2015-12-23 15:14:57,938 INFO  Status: 512
+2015-12-23 15:14:57,939 INFO  CHECK_NRPE: Socket timeout after 10 seconds.
+2015-12-23 15:14:57,939 WARN  Assertion on boolean expression equal to true ... failed
+2015-12-23 15:14:58,091 INFO  /var/fpwork/Nagios//libexec/check_nrpe -H hzbtsscm.china.nsn-net.net -c check_total_procs
+2015-12-23 15:14:58,092 INFO  Status: 256
+2015-12-23 15:14:58,092 INFO  PROCS WARNING: 204 processes | procs=204;-c;;0;
+2015-12-23 15:14:58,092 WARN  Assertion on boolean expression equal to true ... failed
+2015-12-23 15:14:58,143 INFO  /var/fpwork/Nagios//libexec/check_nrpe -H 10.159.194.40 -c check_total_procs
+2015-12-23 15:14:58,143 INFO  Status: 256
+2015-12-23 15:14:58,144 INFO  PROCS WARNING: 241 processes | procs=241;-c;;0;
+2015-12-23 15:14:58,144 WARN  Assertion on boolean expression equal to true ... failed
+2015-12-23 15:14:58,247 INFO  /var/fpwork/Nagios//libexec/check_nrpe -H hzlinb04.china.nsn-net.net -c check_total_procs
+2015-12-23 15:14:58,248 INFO  Status: 256
+2015-12-23 15:14:58,248 INFO  PROCS WARNING: 439 processes | procs=439;-c;;0;
+2015-12-23 15:14:58,249 WARN  Assertion on boolean expression equal to true ... failed
+2015-12-23 15:14:59,399 INFO  /var/fpwork/Nagios//libexec/check_nrpe -H wrling30.emea.nsn-net.net -c check_total_procs
+2015-12-23 15:14:59,400 INFO  Status: 256
+2015-12-23 15:14:59,401 INFO  PROCS WARNING: 271 processes | procs=271;-c;;0;
+2015-12-23 15:14:59,401 WARN  Assertion on boolean expression equal to true ... failed
+2015-12-23 15:15:09,417 INFO  /var/fpwork/Nagios//libexec/check_nrpe -H paketointi.emea.nsn-net.net -c check_total_procs
+2015-12-23 15:15:09,418 INFO  Status: 512
+2015-12-23 15:15:09,418 INFO  CHECK_NRPE: Socket timeout after 10 seconds.
+2015-12-23 15:15:09,419 WARN  Assertion on boolean expression equal to true ... failed
+2015-12-23 15:15:09,420 INFO  
+2015-12-23 15:15:09,420 INFO  Test duration 147.23 secs
+2015-12-23 15:15:09,421 INFO  Test final outcome FAILED
+2015-12-23 15:15:09,422 INFO  

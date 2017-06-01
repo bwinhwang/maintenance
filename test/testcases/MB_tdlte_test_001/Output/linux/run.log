@@ -1,0 +1,123 @@
+2015-12-23 15:11:12,083 INFO  ==========================================
+2015-12-23 15:11:12,083 INFO          MB_tdlte_test_001
+2015-12-23 15:11:12,083 INFO  ==========================================
+2015-12-23 15:11:12,186 INFO  Executed python in foreground with exit status = 0
+2015-12-23 15:11:16,193 INFO  Assertion on boolean expression equal to true ... passed
+2015-12-23 15:11:18,269 INFO  Assertion on boolean expression equal to true ... passed
+2015-12-23 15:11:18,298 INFO  Assertion on boolean expression equal to true ... passed
+2015-12-23 15:11:18,435 WARN  Assertion on boolean expression equal to true ... failed
+2015-12-23 15:11:18,435 INFO  /var/fpwork/Nagios//libexec/check_procs -w 250 -c 400 -s RSZDT
+2015-12-23 15:11:18,435 INFO  Sttus: 256
+2015-12-23 15:11:18,435 INFO  PROCS WARNING: 274 processes with STATE = RSZDT | procs=274;250;400;0;
+2015-12-23 15:11:18,471 INFO  Assertion on boolean expression equal to true ... passed
+2015-12-23 15:11:18,501 INFO  Assertion on boolean expression equal to true ... passed
+2015-12-23 15:11:18,561 INFO  Assertion on boolean expression equal to true ... passed
+2015-12-23 15:11:18,593 INFO  Assertion on boolean expression equal to true ... passed
+2015-12-23 15:11:28,623 WARN  Assertion on boolean expression equal to true ... failed
+2015-12-23 15:11:28,623 INFO  /var/fpwork/Nagios//libexec/check_nt -H 192.168.1.2 -p 12489 -v CLIENTVERSION
+2015-12-23 15:11:28,623 INFO  Sttus: 512
+2015-12-23 15:11:28,624 INFO  CRITICAL - Socket timeout after 10 seconds
+2015-12-23 15:11:38,628 WARN  Assertion on boolean expression equal to true ... failed
+2015-12-23 15:11:38,629 INFO  /var/fpwork/Nagios//libexec/check_nt -H 192.168.1.2 -p 12489 -v UPTIME
+2015-12-23 15:11:38,629 INFO  Sttus: 512
+2015-12-23 15:11:38,629 INFO  CRITICAL - Socket timeout after 10 seconds
+2015-12-23 15:11:48,634 WARN  Assertion on boolean expression equal to true ... failed
+2015-12-23 15:11:48,634 INFO  /var/fpwork/Nagios//libexec/check_nt -H 192.168.1.2 -p 12489 -v CPULOAD -l 5,80,90
+2015-12-23 15:11:48,634 INFO  Sttus: 512
+2015-12-23 15:11:48,634 INFO  CRITICAL - Socket timeout after 10 seconds
+2015-12-23 15:11:58,639 WARN  Assertion on boolean expression equal to true ... failed
+2015-12-23 15:11:58,640 INFO  /var/fpwork/Nagios//libexec/check_nt -H 192.168.1.2 -p 12489 -v MEMUSE -w 80 -c 90
+2015-12-23 15:11:58,640 INFO  Sttus: 512
+2015-12-23 15:11:58,641 INFO  CRITICAL - Socket timeout after 10 seconds
+2015-12-23 15:12:08,650 WARN  Assertion on boolean expression equal to true ... failed
+2015-12-23 15:12:08,651 INFO  /var/fpwork/Nagios//libexec/check_nt -H 192.168.1.2 -p 12489 -v USEDDISKSPACE -l c -w 80 -c 90
+2015-12-23 15:12:08,651 INFO  Sttus: 512
+2015-12-23 15:12:08,651 INFO  CRITICAL - Socket timeout after 10 seconds
+2015-12-23 15:12:18,655 WARN  Assertion on boolean expression equal to true ... failed
+2015-12-23 15:12:18,656 INFO  /var/fpwork/Nagios//libexec/check_nt -H 192.168.1.2 -p 12489 -v SERVICESTATE -d SHOWALL -l W3SVC
+2015-12-23 15:12:18,657 INFO  Sttus: 512
+2015-12-23 15:12:18,657 INFO  CRITICAL - Socket timeout after 10 seconds
+2015-12-23 15:12:28,668 WARN  Assertion on boolean expression equal to true ... failed
+2015-12-23 15:12:28,669 INFO  /var/fpwork/Nagios//libexec/check_nt -H 192.168.1.2 -p 12489 -v PROCSTATE -d SHOWALL -l Explorer.exe
+2015-12-23 15:12:28,669 INFO  Sttus: 512
+2015-12-23 15:12:28,669 INFO  CRITICAL - Socket timeout after 10 seconds
+2015-12-23 15:12:32,856 INFO  Assertion on boolean expression equal to true ... passed
+2015-12-23 15:12:37,019 INFO  Assertion on boolean expression equal to true ... passed
+2015-12-23 15:12:41,192 INFO  Assertion on boolean expression equal to true ... passed
+2015-12-23 15:12:41,289 INFO  Assertion on boolean expression equal to true ... passed
+2015-12-23 15:12:41,388 INFO  Assertion on boolean expression equal to true ... passed
+2015-12-23 15:12:41,492 INFO  Assertion on boolean expression equal to true ... passed
+2015-12-23 15:12:41,501 WARN  Assertion on boolean expression equal to true ... failed
+2015-12-23 15:12:41,501 INFO  /var/fpwork/Nagios//libexec/check_http_without_size -I hzling23.china.nsn-net.net -p 8080
+2015-12-23 15:12:41,502 INFO  Sttus: 32512
+2015-12-23 15:12:41,502 INFO  sh: /var/fpwork/Nagios//libexec/check_http_without_size: No such file or directory
+2015-12-23 15:12:41,505 WARN  Assertion on boolean expression equal to true ... failed
+2015-12-23 15:12:41,505 INFO  /var/fpwork/Nagios//libexec/check_http_without_size -I hzling21.china.nsn-net.net -p 8080
+2015-12-23 15:12:41,505 INFO  Sttus: 32512
+2015-12-23 15:12:41,505 INFO  sh: /var/fpwork/Nagios//libexec/check_http_without_size: No such file or directory
+2015-12-23 15:12:41,509 WARN  Assertion on boolean expression equal to true ... failed
+2015-12-23 15:12:41,509 INFO  /var/fpwork/Nagios//libexec/check_http_without_size -I hzlinb01.china.nsn-net.net -p 8080
+2015-12-23 15:12:41,509 INFO  Sttus: 32512
+2015-12-23 15:12:41,509 INFO  sh: /var/fpwork/Nagios//libexec/check_http_without_size: No such file or directory
+2015-12-23 15:12:41,609 WARN  Assertion on boolean expression equal to true ... failed
+2015-12-23 15:12:41,610 INFO  /var/fpwork/Nagios//libexec/check_nrpe -H hzlinb02.china.nsn-net.net -c check_load
+2015-12-23 15:12:41,611 INFO  Sttus: 256
+2015-12-23 15:12:41,611 INFO  WARNING - load average: 19.28, 18.95, 19.39|load1=19.280;15.000;30.000;0; load5=18.950;10.000;25.000;0; load15=19.390;5.000;20.000;0; 
+2015-12-23 15:12:41,622 WARN  Assertion on boolean expression equal to true ... failed
+2015-12-23 15:12:41,622 INFO  /var/fpwork/Nagios//libexec/check_nrpe -p 8080 -H hzlinb18.china.nsn-net.net -u -t 60 -c check_load -a
+2015-12-23 15:12:41,623 INFO  Sttus: 768
+2015-12-23 15:12:41,623 INFO  /var/fpwork/Nagios//libexec/check_nrpe: option requires an argument -- 'a'
+
+NRPE Plugin for Nagios
+Copyright (c) 1999-2008 Ethan Galstad (nagios@nagios.org)
+Version: 2.15
+Last Modified: 09-06-2013
+License: GPL v2 with exemptions (-l for more info)
+SSL/TLS Available: Anonymous DH Mode, OpenSSL 0.9.6 or higher required
+
+Usage: check_nrpe -H <host> [ -b <bindaddr> ] [-4] [-6] [-n] [-u] [-p <port>] [-t <timeout>] [-c <command>] [-a <arglist...>]
+
+Options:
+ -n         = Do no use SSL
+ -u         = Make socket timeouts return an UNKNOWN state instead of CRITICAL
+ <host>     = The address of the host running the NRPE daemon
+ <bindaddr> = bind to local address
+ -4         = user ipv4 only
+ -6         = user ipv6 only
+ [port]     = The port on which the daemon is running (default=5666)
+ [timeout]  = Number of seconds before connection times out (default=10)
+ [command]  = The name of the command that the remote daemon should run
+ [arglist]  = Optional arguments that should be passed to the command.  Multiple
+              arguments should be separated by a space.  If provided, this must be
+              the last option supplied on the command line.
+
+Note:
+This plugin requires that you have the NRPE daemon running on the remote host.
+You must also have configured the daemon to associate a specific plugin command
+with the [command] option you are specifying here.  Upon receipt of the
+[command] argument, the NRPE daemon will run the appropriate plugin command and
+send the plugin output and return code back to *this* plugin.  This allows you
+to execute plugins on remote hosts and 'fake' the results to make Nagios think
+the plugin is being run locally.
+
+2015-12-23 15:12:41,796 WARN  Assertion on boolean expression equal to true ... failed
+2015-12-23 15:12:41,797 INFO  /var/fpwork/Nagios//libexec/check_nrpe -H hzlinb02.china.nsn-net.net -c check_total_procs
+2015-12-23 15:12:41,798 INFO  Sttus: 512
+2015-12-23 15:12:41,798 INFO  PROCS CRITICAL: 1007 processes | procs=1007;150;200;0;
+2015-12-23 15:12:41,878 WARN  Assertion on boolean expression equal to true ... failed
+2015-12-23 15:12:41,879 INFO  /var/fpwork/Nagios//libexec/check_nrpe -H hzlinb02.china.nsn-net.net -c check_users
+2015-12-23 15:12:41,880 INFO  Sttus: 512
+2015-12-23 15:12:41,880 INFO  USERS CRITICAL - 14 users currently logged in |users=14;5;10;0
+2015-12-23 15:12:41,958 WARN  Assertion on boolean expression equal to true ... failed
+2015-12-23 15:12:41,959 INFO  /var/fpwork/Nagios//libexec/check_nrpe -H hzlinb02.china.nsn-net.net -c check_load
+2015-12-23 15:12:41,959 INFO  Sttus: 256
+2015-12-23 15:12:41,960 INFO  WARNING - load average: 19.28, 18.95, 19.39|load1=19.280;15.000;30.000;0; load5=18.950;10.000;25.000;0; load15=19.390;5.000;20.000;0; 
+2015-12-23 15:12:42,033 WARN  Assertion on boolean expression equal to true ... failed
+2015-12-23 15:12:42,034 INFO  /var/fpwork/Nagios//libexec/check_nrpe -H hzlinb02.china.nsn-net.net -c check_disk
+2015-12-23 15:12:42,034 INFO  Sttus: 512
+2015-12-23 15:12:42,034 INFO  NRPE: Command 'check_disk' not defined
+2015-12-23 15:12:42,182 INFO  Assertion on boolean expression equal to true ... passed
+2015-12-23 15:12:42,184 INFO  
+2015-12-23 15:12:42,185 INFO  Test duration 90.10 secs
+2015-12-23 15:12:42,186 INFO  Test final outcome FAILED
+2015-12-23 15:12:42,186 INFO  

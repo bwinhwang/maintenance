@@ -1,0 +1,61 @@
+#!/bin/sh
+
+MESSAGE="REFERENCE:ST SCM Task
+PRODUCT:NA
+REVIEWEDBY:NA
+DESCRIPTION: modify the file to test sync"
+
+function help()
+{
+	echo "./check_svnsync user password sourceURL distURL"
+}
+
+if [ 4 -ne $# ] 
+then 
+	help && exit 3
+fi
+
+DIR=`dirname $0`
+USER=$1
+PASSWORD=$2
+SOURCE=$3
+DIST=$4
+
+mkdir $DIR/tmp -p 
+cd $DIR
+svn --non-interactive --trust-server-cert --username ${USER} --password ${PASSWORD} checkout ${SOURCE}/syncdir tmp >/dev/null
+cd tmp
+date > sync
+REVISION=`svn --non-interactive --trust-server-cert --username ${USER} --password ${PASSWORD} commit sync -m "$MESSAGE" | grep revision | awk '{ print $3}' | sed 's/\.//'
+`
+cd ..
+rm -rf $DIR/tmp
+
+sleep 15
+
+svn --non-interactive --trust-server-cert --username ${USER} --password ${PASSWORD} log ${DIST}/syncdir --revision $REVISION | grep $REVISION >/dev/null
+
+if [ 0 -eq $? ]
+then
+	echo "SYNC in 15 sec"
+	exit 0
+fi
+
+sleep 15
+
+#check again
+svn --non-interactive --trust-server-cert --username ${USER} --password ${PASSWORD} log ${DIST}/syncdir --revision $REVISION | grep $REVISION >/dev/null
+
+
+if [ 0 -eq $? ]
+then
+	#warning
+	echo "SYNC in 30 sec"
+	exit 1
+else
+	#critical
+	echo "SYNC out of 30 sec"
+	exit 2
+fi
+
+

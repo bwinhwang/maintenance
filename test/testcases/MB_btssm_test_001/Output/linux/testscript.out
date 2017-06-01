@@ -1,0 +1,55 @@
+/var/fpwork/Nagios//libexec/check_ping -H 127.0.0.1 -w 100.0,20% -c 500.0,60% -p 5
+/var/fpwork/Nagios//libexec/check_disk -w 20% -c 10% -p /
+/var/fpwork/Nagios//libexec/check_users -w 20 -c 50
+/var/fpwork/Nagios//libexec/check_procs -w 250 -c 400 -s RSZDT
+/var/fpwork/Nagios//libexec/check_load -w 5.0,4.0,3.0 -c 10.0,6.0,4.0
+/var/fpwork/Nagios//libexec/check_swap -w 20 -c 10
+/var/fpwork/Nagios//libexec/check_ssh  127.0.0.1
+
+/var/fpwork/Nagios//libexec/check_http -I 127.0.0.1 -p 8080
+/var/fpwork/Nagios//libexec/check_nt -H 192.168.1.2 -p 12489 -v CLIENTVERSION 
+/var/fpwork/Nagios//libexec/check_nt -H 192.168.1.2 -p 12489 -v UPTIME 
+/var/fpwork/Nagios//libexec/check_nt -H 192.168.1.2 -p 12489 -v CPULOAD -l 5,80,90
+/var/fpwork/Nagios//libexec/check_nt -H 192.168.1.2 -p 12489 -v MEMUSE -w 80 -c 90
+/var/fpwork/Nagios//libexec/check_nt -H 192.168.1.2 -p 12489 -v USEDDISKSPACE -l c -w 80 -c 90
+/var/fpwork/Nagios//libexec/check_nt -H 192.168.1.2 -p 12489 -v SERVICESTATE -d SHOWALL -l W3SVC
+/var/fpwork/Nagios//libexec/check_nt -H 192.168.1.2 -p 12489 -v PROCSTATE -d SHOWALL -l Explorer.exe
+/var/fpwork/Nagios//libexec/check_nrpe -p 8080 -H euca-10-133-48-165.eucalyptus.becloc53.eecloud.nsn-net.net -u -t 60 -c check_total_procs -a 400 500  
+/var/fpwork/Nagios//libexec/check_nrpe -p 8080 -H euca-10-133-48-165.eucalyptus.becloc53.eecloud.nsn-net.net -u -t 60 -c check_zombie_procs -a 15 30  
+/var/fpwork/Nagios//libexec/check_nrpe -p 8080 -H euca-10-133-48-165.eucalyptus.becloc53.eecloud.nsn-net.net -u -t 60 -c check_load -a 8,8,8 12,12,12  
+/var/fpwork/Nagios//libexec/check_nrpe -p 8080 -H euca-10-133-48-165.eucalyptus.becloc53.eecloud.nsn-net.net -u -t 60 -c check_mem -a 80% 90%  
+/var/fpwork/Nagios//libexec/check_nrpe -p 8080 -H euca-10-133-48-165.eucalyptus.becloc53.eecloud.nsn-net.net -u -t 60 -c check_disk -a 20% 10% /ephemeral 
+/var/fpwork/Nagios//libexec/check_nrpe -p 8080 -H euca-10-133-48-197.eucalyptus.becloc53.eecloud.nsn-net.net -u -t 60 -c check_total_procs -a 400 500  
+/var/fpwork/Nagios//libexec/check_nrpe -p 8080 -H euca-10-133-48-197.eucalyptus.becloc53.eecloud.nsn-net.net -u -t 60 -c check_zombie_procs -a 15 30  
+/var/fpwork/Nagios//libexec/check_nrpe -p 8080 -H euca-10-133-48-197.eucalyptus.becloc53.eecloud.nsn-net.net -u -t 60 -c check_load -a 8,8,8 12,12,12  
+/var/fpwork/Nagios//libexec/check_nrpe -p 8080 -H euca-10-133-48-197.eucalyptus.becloc53.eecloud.nsn-net.net -u -t 60 -c check_mem -a 80% 90%  
+/var/fpwork/Nagios//libexec/check_nrpe -p 8080 -H euca-10-133-48-197.eucalyptus.becloc53.eecloud.nsn-net.net -u -t 60 -c check_disk -a 20% 10% /ephemeral 
+/var/fpwork/Nagios//libexec/check_nrpe -p 8080 -H euca-10-133-48-209.eucalyptus.becloc53.eecloud.nsn-net.net -u -t 60 -c check_total_procs -a 400 500  
+/var/fpwork/Nagios//libexec/check_nrpe -p 8080 -H euca-10-133-48-209.eucalyptus.becloc53.eecloud.nsn-net.net -u -t 60 -c check_zombie_procs -a 15 30  
+/var/fpwork/Nagios//libexec/check_nrpe -p 8080 -H euca-10-133-48-209.eucalyptus.becloc53.eecloud.nsn-net.net -u -t 60 -c check_load -a 8,8,8 12,12,12  
+/var/fpwork/Nagios//libexec/check_nrpe -p 8080 -H euca-10-133-48-209.eucalyptus.becloc53.eecloud.nsn-net.net -u -t 60 -c check_mem -a 80% 90%  
+/var/fpwork/Nagios//libexec/check_nrpe -p 8080 -H euca-10-133-48-209.eucalyptus.becloc53.eecloud.nsn-net.net -u -t 60 -c check_disk -a 20% 10% /ephemeral 
+/var/fpwork/Nagios//libexec/check_nrpe -p 8080 -H euca-10-133-48-208.eucalyptus.becloc53.eecloud.nsn-net.net -u -t 60 -c check_total_procs -a 400 500  
+/var/fpwork/Nagios//libexec/check_nrpe -p 8080 -H euca-10-133-48-208.eucalyptus.becloc53.eecloud.nsn-net.net -u -t 60 -c check_zombie_procs -a 15 30  
+/var/fpwork/Nagios//libexec/check_nrpe -p 8080 -H euca-10-133-48-208.eucalyptus.becloc53.eecloud.nsn-net.net -u -t 60 -c check_load -a 8,8,8 12,12,12  
+/var/fpwork/Nagios//libexec/check_nrpe -p 8080 -H euca-10-133-48-208.eucalyptus.becloc53.eecloud.nsn-net.net -u -t 60 -c check_mem -a 80% 90%  
+/var/fpwork/Nagios//libexec/check_nrpe -p 8080 -H euca-10-133-48-208.eucalyptus.becloc53.eecloud.nsn-net.net -u -t 60 -c check_disk -a 20% 10% /ephemeral 
+/var/fpwork/Nagios//libexec/check_nrpe -p 8080 -H euca-10-133-49-100.eucalyptus.becloc53.eecloud.nsn-net.net -u -t 60 -c check_total_procs -a 400 500  
+/var/fpwork/Nagios//libexec/check_nrpe -p 8080 -H euca-10-133-49-100.eucalyptus.becloc53.eecloud.nsn-net.net -u -t 60 -c check_zombie_procs -a 15 30  
+/var/fpwork/Nagios//libexec/check_nrpe -p 8080 -H euca-10-133-49-100.eucalyptus.becloc53.eecloud.nsn-net.net -u -t 60 -c check_load -a 4,4,4 6,6,6  
+/var/fpwork/Nagios//libexec/check_nrpe -p 8080 -H euca-10-133-49-100.eucalyptus.becloc53.eecloud.nsn-net.net -u -t 60 -c check_mem -a 80% 90%  
+/var/fpwork/Nagios//libexec/check_nrpe -p 8080 -H euca-10-133-49-100.eucalyptus.becloc53.eecloud.nsn-net.net -u -t 60 -c check_disk -a 20% 10% /ephemeral 
+/var/fpwork/Nagios//libexec/check_nrpe -p 8080 -H euca-10-133-49-10.eucalyptus.becloc53.eecloud.nsn-net.net -u -t 60 -c check_total_procs -a 400 500  
+/var/fpwork/Nagios//libexec/check_nrpe -p 8080 -H euca-10-133-49-10.eucalyptus.becloc53.eecloud.nsn-net.net -u -t 60 -c check_zombie_procs -a 15 30  
+/var/fpwork/Nagios//libexec/check_nrpe -p 8080 -H euca-10-133-49-10.eucalyptus.becloc53.eecloud.nsn-net.net -u -t 60 -c check_load -a 20,20,20 30,30,30  
+/var/fpwork/Nagios//libexec/check_nrpe -p 8080 -H euca-10-133-49-10.eucalyptus.becloc53.eecloud.nsn-net.net -u -t 60 -c check_mem -a 80% 90%  
+/var/fpwork/Nagios//libexec/check_nrpe -p 8080 -H euca-10-133-49-10.eucalyptus.becloc53.eecloud.nsn-net.net -u -t 60 -c check_disk -a 20% 10% /ephemeral 
+/var/fpwork/Nagios//libexec/check_nrpe -p 8080 -H belinb64.china.nsn-net.net -u -t 60 -c check_total_procs -a 500 600  
+/var/fpwork/Nagios//libexec/check_nrpe -p 8080 -H belinb64.china.nsn-net.net -u -t 60 -c check_zombie_procs -a 15 30  
+/var/fpwork/Nagios//libexec/check_nrpe -p 8080 -H belinb64.china.nsn-net.net -u -t 60 -c check_load -a 32,32,32 48,48,48  
+/var/fpwork/Nagios//libexec/check_nrpe -p 8080 -H belinb64.china.nsn-net.net -u -t 60 -c check_mem -a 80% 90%  
+/var/fpwork/Nagios//libexec/check_nrpe -p 8080 -H euca-10-133-48-190.eucalyptus.becloc53.eecloud.nsn-net.net -u -t 60 -c check_total_procs -a 400 500  
+/var/fpwork/Nagios//libexec/check_nrpe -p 8080 -H euca-10-133-48-190.eucalyptus.becloc53.eecloud.nsn-net.net -u -t 60 -c check_zombie_procs -a 15 30  
+/var/fpwork/Nagios//libexec/check_nrpe -p 8080 -H euca-10-133-48-190.eucalyptus.becloc53.eecloud.nsn-net.net -u -t 60 -c check_load -a 12,12,12 18,18,18  
+/var/fpwork/Nagios//libexec/check_nrpe -p 8080 -H euca-10-133-48-190.eucalyptus.becloc53.eecloud.nsn-net.net -u -t 60 -c check_mem -a 80% 90%  
+/var/fpwork/Nagios//libexec/check_nrpe -p 8080 -H euca-10-133-48-190.eucalyptus.becloc53.eecloud.nsn-net.net -u -t 60 -c check_disk -a 20% 10% /ephemeral 

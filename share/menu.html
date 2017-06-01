@@ -1,0 +1,41 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+	<title>Web Interface Monitoring - Theme design by Eduardo L. Arana</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+	<meta http-equiv="Content-Language" content="en" />
+	<meta name="robots" content="noindex, nofollow" />
+	<meta name="author" content="Eduardo L. Arana - info@arananet.net"/>
+	<link rel="stylesheet" type="text/css" href="stylesheets/interface/menu.css" media="screen, projection" />
+	<link rel="shortcut icon" type="image/x-icon" href="images/favicon.ico" />
+	<script type="text/javascript" src="js/mootools.js"></script>
+	<script type="text/javascript" src="js/menu.js"></script>
+	<script>
+	function change_bg(obj){
+		
+		var a=document.getElementById("menu").getElementsByTagName("li");
+		for(var i=0;i<a.length;i++){k=i%2+1;a[i].className="menuli_style"+k;}
+		obj.parentNode.className="current";
+	}
+	</script>
+</head>
+<body>
+	<div id="menu">
+		<h2>Monitoring</h2>
+		<ul>
+			<li class="menuli_style2"><img src="images/icons/host.png" width="20" height="20" style="margin-top:-10px" align="absmiddle"><a href="/nagios/cgi-bin/status.cgi?hostgroup=all&amp;style=hostdetail" onclick="change_bg(this)" target="main">Host Detail</a></li>
+			<li class="menuli_style1"><img src="images/icons/servicesgroup.png" width="20" height="20" style="margin-top:-10px" align="absmiddle"><a href="/nagios/cgi-bin/status.cgi?host=all" onclick="change_bg(this)" target="main">Service Detail</a></li>
+			<li class="menuli_style2"><img src="images/icons/hostgroup.png" width="20" height="20" style="margin-top:-10px" align="absmiddle"><a href="/nagios/cgi-bin/status.cgi?hostgroup=all&amp;style=overview" onclick="change_bg(this)" target="main">Hostgroup Overview</a></li>
+			<li class="menuli_style1"><img src="images/icons/servicesgroupdet.png" width="20" height="20" style="margin-top:-10px" align="absmiddle"><a href="/nagios/cgi-bin/status.cgi?servicegroup=all&amp;style=overview"  onclick="change_bg(this)" target="main">Servicegroup Overview</a></li>
+			<li class="menuli_style2"><img src="images/icons/servicesgrouperror.png" width="20" height="20" style="margin-top:-10px" align="absmiddle"><a href="/nagios/cgi-bin/status.cgi?host=all&amp;servicestatustypes=28"  onclick="change_bg(this)" target="main">Service Problems</a></li>
+			<li class="menuli_style1"><img src="images/icons/hostproblem.png" width="20" height="20" style="margin-top:-10px" align="absmiddle"><a href="/nagios/cgi-bin/status.cgi?hostgroup=all&amp;style=hostdetail&amp;hoststatustypes=12" onclick="change_bg(this)" target="main">Host Problems</a></li>
+			<li class="menuli_style1"><img src="images/icons/process.png" width="20" height="20" style="margin-top:-10px" align="absmiddle"><a href="/nagios/cgi-bin/extinfo.cgi?type=0" onclick="change_bg(this)" target="main">Process Info</a></li>
+			<li class="menuli_style1"><img src="images/icons/cal.png" width="20" height="20" style="margin-top:-10px" align="absmiddle"><a href="/nagios/cgi-bin/extinfo.cgi?type=7" onclick="change_bg(this)" target="main">Scheduling Queue</a></li>
+		</ul>
+		<h2>Configuration</h2>
+		<ul>
+			<li class="menuli_style1"><img src="images/icons/config.png" width="20" height="20" style="margin-top:-10px" align="absmiddle"><a href="/nagios/cgi-bin/config.cgi" onclick="change_bg(this)" target="main">View Config</a></li>
+		</ul>
+	</div>
+</body>
+</html>

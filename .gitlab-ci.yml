@@ -1,0 +1,25 @@
+# This is so weak compared to Jenkins family ...
+# But hey, it's new and cute :)
+
+before_script:
+  - echo script start
+  - test/scripts/adapt_path.sh
+
+config_run:
+  type: test
+  script:
+    - echo this is check config session
+    - test/scripts/config.sh 
+  tags:
+    - config 
+    - rvm
+
+
+UT:
+  type: test
+  script:
+    - echo this is ut session
+    - test/scripts/ut.sh
+  tags:
+    - config
+    - rvm

@@ -1,0 +1,32 @@
+/var/fpwork/Nagios//libexec/check_ping -H 127.0.0.1 -w 100.0,20% -c 500.0,60% -p 5
+/var/fpwork/Nagios//libexec/check_disk -w 20% -c 10% -p /
+/var/fpwork/Nagios//libexec/check_users -w 20 -c 50
+/var/fpwork/Nagios//libexec/check_procs -w 250 -c 400 -s RSZDT
+/var/fpwork/Nagios//libexec/check_load -w 5.0,4.0,3.0 -c 10.0,6.0,4.0
+/var/fpwork/Nagios//libexec/check_swap -w 20 -c 10
+/var/fpwork/Nagios//libexec/check_ssh  127.0.0.1
+
+/var/fpwork/Nagios//libexec/check_http -I 127.0.0.1 -p 8080
+/var/fpwork/Nagios//libexec/check_nt -H 192.168.1.2 -p 12489 -v CLIENTVERSION 
+/var/fpwork/Nagios//libexec/check_nt -H 192.168.1.2 -p 12489 -v UPTIME 
+/var/fpwork/Nagios//libexec/check_nt -H 192.168.1.2 -p 12489 -v CPULOAD -l 5,80,90
+/var/fpwork/Nagios//libexec/check_nt -H 192.168.1.2 -p 12489 -v MEMUSE -w 80 -c 90
+/var/fpwork/Nagios//libexec/check_nt -H 192.168.1.2 -p 12489 -v USEDDISKSPACE -l c -w 80 -c 90
+/var/fpwork/Nagios//libexec/check_nt -H 192.168.1.2 -p 12489 -v SERVICESTATE -d SHOWALL -l W3SVC
+/var/fpwork/Nagios//libexec/check_nt -H 192.168.1.2 -p 12489 -v PROCSTATE -d SHOWALL -l Explorer.exe
+/var/fpwork/Nagios//libexec/check_ping -H hzling23.china.nsn-net.net -w 100.0,20% -c 500.0,60% -p 5
+/var/fpwork/Nagios//libexec/check_ping -H hzling21.china.nsn-net.net -w 100.0,20% -c 500.0,60% -p 5
+/var/fpwork/Nagios//libexec/check_ping -H hzlinb01.china.nsn-net.net -w 100.0,20% -c 500.0,60% -p 5
+/var/fpwork/Nagios//libexec/check_ssh  hzling23.china.nsn-net.net
+/var/fpwork/Nagios//libexec/check_ssh  hzling21.china.nsn-net.net
+/var/fpwork/Nagios//libexec/check_ssh  hzlinb01.china.nsn-net.net
+/var/fpwork/Nagios//libexec/check_http_without_size -I hzling23.china.nsn-net.net -p 8080
+/var/fpwork/Nagios//libexec/check_http_without_size -I hzling21.china.nsn-net.net -p 8080
+/var/fpwork/Nagios//libexec/check_http_without_size -I hzlinb01.china.nsn-net.net -p 8080
+/var/fpwork/Nagios//libexec/check_nrpe -H hzlinb02.china.nsn-net.net -c check_load
+/var/fpwork/Nagios//libexec/check_nrpe -p 8080 -H hzlinb18.china.nsn-net.net -u -t 60 -c check_load -a    
+/var/fpwork/Nagios//libexec/check_nrpe -H hzlinb02.china.nsn-net.net -c check_total_procs
+/var/fpwork/Nagios//libexec/check_nrpe -H hzlinb02.china.nsn-net.net -c check_users
+/var/fpwork/Nagios//libexec/check_nrpe -H hzlinb02.china.nsn-net.net -c check_load
+/var/fpwork/Nagios//libexec/check_nrpe -H hzlinb02.china.nsn-net.net -c check_disk
+/var/fpwork/Nagios//libexec/check_nrpe -H hzlinb02.china.nsn-net.net -c check_zombie_procs

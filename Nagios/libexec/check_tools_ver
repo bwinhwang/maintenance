@@ -1,0 +1,117 @@
+#!/bin/bash
+
+#user <cmd> -dumpversion to get version info
+chkver1(){
+    cmd=$1
+    ver=$2
+    verline=`$cmd -dumpversion 2>/dev/null`
+}
+
+#user <cmd> --version to get version info
+chkver2(){
+    cmd=$1
+    ver=$2
+    $cmd --version 2>&1 1>/dev/null 2>/dev/null
+
+    if [ $? -ne 0 ]; then
+        return 2
+    fi
+    verline=`$cmd --version 2>&1 | egrep -i "$cmd|version" |grep --extended-regexp -o '[0-9._-]+' |head -1` 1>/dev/null
+}
+
+#user <cmd> -version to get version info
+chkver3(){
+    cmd=$1
+    ver=$2
+    $cmd -version 2>&1 1>/dev/null 2>/dev/null
+    if [ $? -ne 0 ]; then
+        return 2
+    fi
+    verline=`$cmd -version 2>&1 | egrep -i "$cmd|version" |grep --extended-regexp -o '[0-9._-]+' |head -1`
+}
+
+#run chkver function, if ok, compare version
+runcmd(){
+    #echo "run cmd $@"
+    "$@"
+    if [ $? -ne 0 ]; then
+        return 2
+    fi
+    #echo "find ver: $3"
+    ver_regx=`echo $3 | sed 's#\.#[.]#g' |sed 's#/#|#g'`
+    echo $verline |grep -q --extended-regexp -o "^$ver_regx" 
+    if [ $? -ne 0 ]; then
+        echo "### $cmd version info < $verline > is not same as $ver"
+        return 1 
+    else
+        return 0
+    fi
+}
+
+#check tool,iterate all func in verfunlist
+chkverbyfunc(){
+    cmd=$1
+    ver=$2
+    for vfun in ${verfunlist[*]}
+    do
+        runcmd $vfun $cmd $ver
+        ret=$?
+        #echo "$vfun ret is $ret"
+        if [ $ret -eq 0 ]; then
+            return 0
+        fi
+        if [ $ret -ne 2 ]; then
+            return 1
+        fi
+    done
+    echo "### cannot get $cmd version by ${verfunlist[*]} or it's not exists ###"
+    return 1
+}
+
+#check tool list from args
+chkalltools(){
+    #echo "param is $@"
+    for toolver in $@
+    do
+        cmd=`echo $toolver|cut -d, -f1`
+        ver=`echo $toolver|cut -d, -f2`
+        chkverbyfunc $cmd $ver
+        if [ $? -ne 0 ]; then
+          finalRet=2
+        fi 
+    done
+}
+
+getargs(){
+    while getopts "e:t:" arg
+    do
+        case $arg in
+            e)
+                envcmd="$OPTARG"
+                ;;
+            t)
+                toolvlist="$OPTARG"
+                ;;
+            ?)
+                echo "usage: $0 (-e <envcmd>) -t <toolver_list>"
+                echo "eg.: $0 -e \"source env.sh\" -t \"python,2.7.2 gcc,4.1.2\""
+                exit 1
+                ;;
+        esac
+    done
+}
+
+verfunlist=(chkver1 
+            chkver2
+            chkver3)
+
+#_______main______
+getargs "$@"
+eval "$envcmd" 2>&1 1>/dev/null 2>/dev/null
+finalRet=0
+chkalltools $toolvlist
+if [ $finalRet -eq 0 ]
+then
+    echo All tools are fine
+fi
+exit $finalRet

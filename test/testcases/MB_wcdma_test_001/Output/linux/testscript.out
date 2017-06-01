@@ -1,0 +1,50 @@
+/var/fpwork/Nagios//libexec/check_ping -H 127.0.0.1 -w 100.0,20% -c 500.0,60% -p 5
+/var/fpwork/Nagios//libexec/check_disk -w 20% -c 10% -p /
+/var/fpwork/Nagios//libexec/check_users -w 20 -c 50
+/var/fpwork/Nagios//libexec/check_procs -w 250 -c 400 -s RSZDT
+/var/fpwork/Nagios//libexec/check_load -w 5.0,4.0,3.0 -c 10.0,6.0,4.0
+/var/fpwork/Nagios//libexec/check_swap -w 20 -c 10
+/var/fpwork/Nagios//libexec/check_ssh  127.0.0.1
+
+/var/fpwork/Nagios//libexec/check_http -I 127.0.0.1 -p 8080
+/var/fpwork/Nagios//libexec/check_nt -H 192.168.1.2 -p 12489 -v CLIENTVERSION 
+/var/fpwork/Nagios//libexec/check_nt -H 192.168.1.2 -p 12489 -v UPTIME 
+/var/fpwork/Nagios//libexec/check_nt -H 192.168.1.2 -p 12489 -v CPULOAD -l 5,80,90
+/var/fpwork/Nagios//libexec/check_nt -H 192.168.1.2 -p 12489 -v MEMUSE -w 80 -c 90
+/var/fpwork/Nagios//libexec/check_nt -H 192.168.1.2 -p 12489 -v USEDDISKSPACE -l c -w 80 -c 90
+/var/fpwork/Nagios//libexec/check_nt -H 192.168.1.2 -p 12489 -v SERVICESTATE -d SHOWALL -l W3SVC
+/var/fpwork/Nagios//libexec/check_nt -H 192.168.1.2 -p 12489 -v PROCSTATE -d SHOWALL -l Explorer.exe
+/var/fpwork/Nagios//libexec/check_ping -H wrling30.emea.nsn-net.net -w 300.0,20% -c 500.0,60% -p 5
+/var/fpwork/Nagios//libexec/check_ping -H paketointi.emea.nsn-net.net -w 300.0,20% -c 500.0,60% -p 5
+/var/fpwork/Nagios//libexec/check_ssh  wrling30.emea.nsn-net.net
+/var/fpwork/Nagios//libexec/check_ssh  paketointi.emea.nsn-net.net
+/var/fpwork/Nagios//libexec/check_http_without_size -I wrling30.emea.nsn-net.net -p 8085
+/var/fpwork/Nagios//libexec/check_nrpe -H wrling30.emea.nsn-net.net -c check_svn_cb
+/var/fpwork/Nagios//libexec/check_http_without_size -I wrling30.emea.nsn-net.net -p 8088
+/var/fpwork/Nagios//libexec/check_http_without_size -I paketointi.emea.nsn-net.net 
+
+/var/fpwork/Nagios//libexec/check_nrpe -H hzbtsscm.china.nsn-net.net -c check_load
+/var/fpwork/Nagios//libexec/check_nrpe -H 10.159.194.40 -c check_load
+/var/fpwork/Nagios//libexec/check_nrpe -H hzlinb04.china.nsn-net.net -c check_load
+/var/fpwork/Nagios//libexec/check_nrpe -H wrling30.emea.nsn-net.net -c check_load
+/var/fpwork/Nagios//libexec/check_nrpe -H paketointi.emea.nsn-net.net -c check_load
+/var/fpwork/Nagios//libexec/check_nrpe -H hzbtsscm.china.nsn-net.net -c check_disk
+/var/fpwork/Nagios//libexec/check_nrpe -H 10.159.194.40 -c check_disk
+/var/fpwork/Nagios//libexec/check_nrpe -H hzlinb04.china.nsn-net.net -c check_disk
+/var/fpwork/Nagios//libexec/check_nrpe -H wrling30.emea.nsn-net.net -c check_disk
+/var/fpwork/Nagios//libexec/check_nrpe -H paketointi.emea.nsn-net.net -c check_disk
+/var/fpwork/Nagios//libexec/check_nrpe -H hzbtsscm.china.nsn-net.net -c check_users
+/var/fpwork/Nagios//libexec/check_nrpe -H 10.159.194.40 -c check_users
+/var/fpwork/Nagios//libexec/check_nrpe -H hzlinb04.china.nsn-net.net -c check_users
+/var/fpwork/Nagios//libexec/check_nrpe -H wrling30.emea.nsn-net.net -c check_users
+/var/fpwork/Nagios//libexec/check_nrpe -H paketointi.emea.nsn-net.net -c check_users
+/var/fpwork/Nagios//libexec/check_nrpe -H hzbtsscm.china.nsn-net.net -c check_zombie_procs
+/var/fpwork/Nagios//libexec/check_nrpe -H 10.159.194.40 -c check_zombie_procs
+/var/fpwork/Nagios//libexec/check_nrpe -H hzlinb04.china.nsn-net.net -c check_zombie_procs
+/var/fpwork/Nagios//libexec/check_nrpe -H wrling30.emea.nsn-net.net -c check_zombie_procs
+/var/fpwork/Nagios//libexec/check_nrpe -H paketointi.emea.nsn-net.net -c check_zombie_procs
+/var/fpwork/Nagios//libexec/check_nrpe -H hzbtsscm.china.nsn-net.net -c check_total_procs
+/var/fpwork/Nagios//libexec/check_nrpe -H 10.159.194.40 -c check_total_procs
+/var/fpwork/Nagios//libexec/check_nrpe -H hzlinb04.china.nsn-net.net -c check_total_procs
+/var/fpwork/Nagios//libexec/check_nrpe -H wrling30.emea.nsn-net.net -c check_total_procs
+/var/fpwork/Nagios//libexec/check_nrpe -H paketointi.emea.nsn-net.net -c check_total_procs

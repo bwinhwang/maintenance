@@ -1,0 +1,86 @@
+2015-12-23 15:09:43,091 INFO  ==========================================
+2015-12-23 15:09:43,091 INFO          MB_btssm_test_001
+2015-12-23 15:09:43,091 INFO  ==========================================
+2015-12-23 15:09:43,197 INFO  Executed python in foreground with exit status = 0
+2015-12-23 15:09:47,211 INFO  Assertion on boolean expression equal to true ... passed
+2015-12-23 15:09:47,240 INFO  Assertion on boolean expression equal to true ... passed
+2015-12-23 15:09:47,249 INFO  Assertion on boolean expression equal to true ... passed
+2015-12-23 15:09:47,291 INFO  Assertion on boolean expression equal to true ... passed
+2015-12-23 15:09:47,301 INFO  Assertion on boolean expression equal to true ... passed
+2015-12-23 15:09:47,309 INFO  Assertion on boolean expression equal to true ... passed
+2015-12-23 15:09:47,331 INFO  Assertion on boolean expression equal to true ... passed
+2015-12-23 15:09:47,340 INFO  Assertion on boolean expression equal to true ... passed
+2015-12-23 15:09:57,344 INFO  /var/fpwork/Nagios//libexec/check_nt -H 192.168.1.2 -p 12489 -v CLIENTVERSION
+2015-12-23 15:09:57,345 INFO  Status: 512
+2015-12-23 15:09:57,346 INFO  CRITICAL - Socket timeout after 10 seconds
+2015-12-23 15:09:57,346 WARN  Assertion on boolean expression equal to true ... failed
+2015-12-23 15:10:07,354 INFO  /var/fpwork/Nagios//libexec/check_nt -H 192.168.1.2 -p 12489 -v UPTIME
+2015-12-23 15:10:07,355 INFO  Status: 512
+2015-12-23 15:10:07,356 INFO  CRITICAL - Socket timeout after 10 seconds
+2015-12-23 15:10:07,356 WARN  Assertion on boolean expression equal to true ... failed
+2015-12-23 15:10:17,365 INFO  /var/fpwork/Nagios//libexec/check_nt -H 192.168.1.2 -p 12489 -v CPULOAD -l 5,80,90
+2015-12-23 15:10:17,366 INFO  Status: 512
+2015-12-23 15:10:17,366 INFO  CRITICAL - Socket timeout after 10 seconds
+2015-12-23 15:10:17,367 WARN  Assertion on boolean expression equal to true ... failed
+2015-12-23 15:10:27,376 INFO  /var/fpwork/Nagios//libexec/check_nt -H 192.168.1.2 -p 12489 -v MEMUSE -w 80 -c 90
+2015-12-23 15:10:27,377 INFO  Status: 512
+2015-12-23 15:10:27,377 INFO  CRITICAL - Socket timeout after 10 seconds
+2015-12-23 15:10:27,378 WARN  Assertion on boolean expression equal to true ... failed
+2015-12-23 15:10:37,387 INFO  /var/fpwork/Nagios//libexec/check_nt -H 192.168.1.2 -p 12489 -v USEDDISKSPACE -l c -w 80 -c 90
+2015-12-23 15:10:37,388 INFO  Status: 512
+2015-12-23 15:10:37,388 INFO  CRITICAL - Socket timeout after 10 seconds
+2015-12-23 15:10:37,389 WARN  Assertion on boolean expression equal to true ... failed
+2015-12-23 15:10:47,398 INFO  /var/fpwork/Nagios//libexec/check_nt -H 192.168.1.2 -p 12489 -v SERVICESTATE -d SHOWALL -l W3SVC
+2015-12-23 15:10:47,399 INFO  Status: 512
+2015-12-23 15:10:47,399 INFO  CRITICAL - Socket timeout after 10 seconds
+2015-12-23 15:10:47,400 WARN  Assertion on boolean expression equal to true ... failed
+2015-12-23 15:10:57,409 INFO  /var/fpwork/Nagios//libexec/check_nt -H 192.168.1.2 -p 12489 -v PROCSTATE -d SHOWALL -l Explorer.exe
+2015-12-23 15:10:57,411 INFO  Status: 512
+2015-12-23 15:10:57,411 INFO  CRITICAL - Socket timeout after 10 seconds
+2015-12-23 15:10:57,412 WARN  Assertion on boolean expression equal to true ... failed
+2015-12-23 15:10:57,813 INFO  Assertion on boolean expression equal to true ... passed
+2015-12-23 15:10:58,239 INFO  Assertion on boolean expression equal to true ... passed
+2015-12-23 15:10:58,567 INFO  Assertion on boolean expression equal to true ... passed
+2015-12-23 15:10:59,913 INFO  Assertion on boolean expression equal to true ... passed
+2015-12-23 15:11:00,243 INFO  Assertion on boolean expression equal to true ... passed
+2015-12-23 15:11:00,563 INFO  Assertion on boolean expression equal to true ... passed
+2015-12-23 15:11:00,866 INFO  Assertion on boolean expression equal to true ... passed
+2015-12-23 15:11:01,182 INFO  Assertion on boolean expression equal to true ... passed
+2015-12-23 15:11:01,486 INFO  Assertion on boolean expression equal to true ... passed
+2015-12-23 15:11:01,816 INFO  Assertion on boolean expression equal to true ... passed
+2015-12-23 15:11:02,117 INFO  Assertion on boolean expression equal to true ... passed
+2015-12-23 15:11:02,414 INFO  Assertion on boolean expression equal to true ... passed
+2015-12-23 15:11:02,759 INFO  Assertion on boolean expression equal to true ... passed
+2015-12-23 15:11:03,096 INFO  Assertion on boolean expression equal to true ... passed
+2015-12-23 15:11:03,411 INFO  Assertion on boolean expression equal to true ... passed
+2015-12-23 15:11:03,728 INFO  Assertion on boolean expression equal to true ... passed
+2015-12-23 15:11:04,020 INFO  Assertion on boolean expression equal to true ... passed
+2015-12-23 15:11:04,326 INFO  Assertion on boolean expression equal to true ... passed
+2015-12-23 15:11:04,669 INFO  Assertion on boolean expression equal to true ... passed
+2015-12-23 15:11:05,015 INFO  Assertion on boolean expression equal to true ... passed
+2015-12-23 15:11:05,336 INFO  Assertion on boolean expression equal to true ... passed
+2015-12-23 15:11:05,663 INFO  Assertion on boolean expression equal to true ... passed
+2015-12-23 15:11:06,054 INFO  Assertion on boolean expression equal to true ... passed
+2015-12-23 15:11:06,470 INFO  Assertion on boolean expression equal to true ... passed
+2015-12-23 15:11:06,889 INFO  /var/fpwork/Nagios//libexec/check_nrpe -p 8080 -H euca-10-133-49-100.eucalyptus.becloc53.eecloud.nsn-net.net -u -t 60 -c check_disk -a 20% 10% /ephemeral
+2015-12-23 15:11:06,889 INFO  Status: 256
+2015-12-23 15:11:06,889 INFO  DISK WARNING - free space: /ephemeral 10542 MB (20% inode=72%);| /ephemeral=40642MB;43139;48531;0;53924
+2015-12-23 15:11:06,889 WARN  Assertion on boolean expression equal to true ... failed
+2015-12-23 15:11:07,253 INFO  Assertion on boolean expression equal to true ... passed
+2015-12-23 15:11:07,610 INFO  Assertion on boolean expression equal to true ... passed
+2015-12-23 15:11:08,019 INFO  Assertion on boolean expression equal to true ... passed
+2015-12-23 15:11:08,398 INFO  Assertion on boolean expression equal to true ... passed
+2015-12-23 15:11:08,860 INFO  Assertion on boolean expression equal to true ... passed
+2015-12-23 15:11:09,271 INFO  Assertion on boolean expression equal to true ... passed
+2015-12-23 15:11:09,642 INFO  Assertion on boolean expression equal to true ... passed
+2015-12-23 15:11:09,993 INFO  Assertion on boolean expression equal to true ... passed
+2015-12-23 15:11:10,377 INFO  Assertion on boolean expression equal to true ... passed
+2015-12-23 15:11:10,783 INFO  Assertion on boolean expression equal to true ... passed
+2015-12-23 15:11:11,185 INFO  Assertion on boolean expression equal to true ... passed
+2015-12-23 15:11:11,452 INFO  Assertion on boolean expression equal to true ... passed
+2015-12-23 15:11:11,785 INFO  Assertion on boolean expression equal to true ... passed
+2015-12-23 15:11:12,080 INFO  Assertion on boolean expression equal to true ... passed
+2015-12-23 15:11:12,081 INFO  
+2015-12-23 15:11:12,081 INFO  Test duration 88.98 secs
+2015-12-23 15:11:12,081 INFO  Test final outcome FAILED
+2015-12-23 15:11:12,082 INFO  

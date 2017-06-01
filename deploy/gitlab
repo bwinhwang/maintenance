@@ -1,0 +1,29 @@
+GIT_PROJECT=${PWD}
+NAGIOS_HTTPD=/var/fpwork/gitlab_verify/Gitlab/Apache
+NAGIOS_DIR=/var/fpwork/gitlab_verify/Gitlab/Nagios
+HTTP_PORT=9000
+PNP4NAGIOS_PATH=/var/fpwork/gitlab_verify/pnp4nagios
+
+#toolkit
+NAGIOS_APACHE_SRC=/home/nagiosadmin/src/Apache/
+NRPE_SRC=/home/nagiosadmin/src/nrpe-2.15.tgz
+NAGIOS_PLUGINS_SRC=/home/nagiosadmin/src/nagios-plugins-2.1.1.tgz
+NAGIOS_SRC=/home/nagiosadmin/src/nagios-3.4.3.tar.gz
+PNP4NAGIOS_SRC=/home/nagiosadmin/src/pnp4nagios-0.6.24.tar.gz
+NAGIOS_VIEW_SRC=/home/nagiosadmin/src/arana_style-1.0for-Nagios3x-ENG.zip
+NAGIOS_VIEW_DIR=arana_style
+
+NAGIOS_VER=`echo ${NAGIOS_SRC}| awk -F'/' '{print $NF}'`
+NRPE_VER=`echo ${NRPE_SRC} | awk -F'/' '{print $NF}'`
+NRPE_VER_DIR=`echo $NRPE_VER | sed 's#.tar.gz##g' | sed 's#.tgz##g'` 
+
+NAGIOS_PLUGINS_VER=`echo ${NAGIOS_PLUGINS_SRC} | awk -F'/' '{print $NF}'`
+NAGIOS_PLUGINS_VER_DIR=`echo $NAGIOS_PLUGINS_VER | sed 's#.tar.gz##g' | sed 's#.tgz##g'`
+
+PNP4NAGIOS_VER=`echo ${PNP4NAGIOS_SRC} |  awk -F'/' '{print $NF}'`
+PNP4NAGIOS_VER_DIR=`echo $PNP4NAGIOS_VER | sed 's#.tar.gz##g' | sed 's#.tgz##g'`
+
+REPOS=https://gitlab-ci-token:a47a26dbccdf2292534141b2e526fd@gitlabe1.ext.net.nokia.com/miaguo/maintenance_break.git
+NAGIOS_USER=nagiosadmin
+NAGIOS_GROUP=nagiosadmin
+
